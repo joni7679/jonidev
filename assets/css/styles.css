@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.nav-link {
+    display: inline-block;
+    ;
+}
+
+.cricle {
+    scale: 0;
+    /* opacity: 0; */
+}
+
+.banner h5 {
+    -webkit-text-stroke: 2px gray;
+    color: transparent;
+}
