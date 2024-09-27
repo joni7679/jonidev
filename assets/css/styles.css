@@ -13,12 +13,109 @@
     ;
 }
 
-.cricle {
-    scale: 0;
-    /* opacity: 0; */
-}
 
 .banner h5 {
     -webkit-text-stroke: 2px gray;
     color: transparent;
+    transition: all 0.5s;
+
+}
+
+.banner h5:hover {
+    color: #000;
+}
+
+.banner h4:hover {
+    -webkit-text-stroke: 2px gray;
+    color: transparent;
+    transition: all 0.5s;
+}
+
+
+
+.btn2 {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #fff;
+    z-index: 1;
+    background: #212121;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.btn2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #fff;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms
+}
+
+.btn2:hover {
+    color: #212121;
+}
+
+.btn2:hover::before {
+    width: 100%;
+}
+
+
+/* From Uiverse.io by thisSasha */
+.btn {
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #fff;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.btn:hover {
+    color: #e8e8e8;
+}
+
+.btn:hover::before {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.btn:active {
+    transform: scale(80%);
 }

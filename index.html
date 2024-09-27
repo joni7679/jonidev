@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <!-- <div class="loader-div w-full h-screen fixed bg-black z-50 flex">
+        <div class="wrapper-one w-[50%] h-full bg-green-500"></div>
+        <div class="wrapper-two w-[50%] h-full bg-orange-500">
+        </div>
+    </div> -->
+
     <main class="w-full overflow-hidden">
 
         <nav class="flex justify-around items-center p-4">
@@ -20,7 +26,7 @@
             </div>
 
             <!-- Navbar Links -->
-            <ul class="flex space-x-8 text-lg">
+            <ul class="flex space-x-8 text-lg z-9">
                 <li><a href="#" class="nav-link hover:text-gray-700">Home</a></li>
                 <li><a href="#" class="nav-link hover:text-gray-700">About Me</a></li>
                 <li><a href="#" class="nav-link hover:text-gray-700">Services</a></li>
@@ -30,13 +36,14 @@
                 </li>
             </ul>
         </nav>
-        <div class="hero-section max-w-[1320px] mx-auto relative">
-            <div
-                class="cricle w-[60px] h-[60px] bg-white  rounded-full border-2 border-solid flex items-center justify-center absolute top-[24%] left-[37%] transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <i class="ri-arrow-right-up-fill text-4xl"></i>
-            </div>
+        <div class="hero-section max-w-[1320px] mx-auto relative z-[3]">
             <div class="flex w-full h-screen items-center justify-center flex-col uppercase ">
-                <div class="text-center absolute top-0 banner">
+                <div class="text-center absolute top-0 banner w-[900px]">
+                    <div
+                        class="cricle w-[60px] h-[60px] bg-white scale-0 rounded-full border-2 border-solid flex items-center justify-center absolute top-[24%] left-[37%] transform -translate-x-1/2 -translate-y-1/2 z-10">
+                        <i class="ri-arrow-right-up-fill text-4xl"></i>
+                    </div>
+
                     <h6 class="text-xl font-semibold text-gray-700">Hi 👋, my name is Joni halder and I am a freelancer
                     </h6>
                     <h4 class="text-6xl font-bold text-black">WEBSITE DEVELOPER</h4>
@@ -45,31 +52,51 @@
                 <div class="dev-img absolute top-[-12px] flex flex-col items-center justify-around">
                     <img class="mt-[20px]" src="./assets/images/joni-dev.png" alt="">
                     <div class="flex  gap-[80px] z-10 absolute top-[85%]">
-                        <a href="#"
-                            class="px-6 py-3 bg-white text-black border border-black font-semibold rounded hover:bg-gray-100">Hire
+                        <a href="#" class="btn">Hire
                             Me</a>
-                        <a href="#"
-                            class="px-6 py-3 bg-black text-white font-semibold rounded hover:bg-gray-700">Download
+                        <a href="#" class="btn2">Download
                             CV</a>
                     </div>
-
-
                 </div>
-
             </div>
-
-
-
         </div>
-        <div class="about-section max-w-[1320px] mx-auto px-5 w-full ">
+
+        <div class="about-section max-w-[1320px] mx-auto px-10 w-full ">
             <h2 class="text-4xl font-bold text-center">About Me</h2>
             <div class="flex items-center justify-between">
                 <div class="about-left">
-                    <img src="./assets/images/joni-dev.png" alt="">
+                    <img src="./assets/images/effect.png" alt="">
+
                 </div>
-                <div class="about-right">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis in, nihil deleniti rerum
-                        doloribus voluptatem. Et vitae hic atque ad quidem, in vel!</p>
+                <div class="about-right w-[50%]">
+                    <h3 class="text-xl font-semibold text-gray-700">Hi 👋, my name is Joni halder</h3>
+                    <p>I’m a passionate Frontend Web Developer skilled in HTML, CSS, JavaScript, React.js, and modern
+                        frameworks like Tailwind CSS and GSAP. Explore my projects showcasing dynamic UI design,
+                        responsive layouts, and innovative animations. Let’s create exceptional web experiences
+                        together!</p>
+                    <button href="#" class="btn2 mt-5">Download
+                        CV</button>
+                    <div class="social-icons mt-5 flex items-center  gap-5">
+                        <div
+                            class="icon w-[40px] h-[40px] border-2 rounded-full border-[#000] flex items-center justify-center cursor-pointer">
+                            <i class="ri-facebook-fill text-xl"></i>
+                        </div>
+                        <div
+                            class="icon w-[40px] h-[40px] border-2 rounded-full border-[#000] flex items-center justify-center cursor-pointer">
+                            <i class="ri-instagram-line text-xl"></i>
+                        </div>
+                        <div
+                            class="icon w-[40px] h-[40px] border-2 rounded-full border-[#000] flex items-center justify-center cursor-pointer">
+                            <i class="ri-github-line text-xl"></i>
+                        </div>
+                        <div
+                            class="icon w-[40px] h-[40px] border-2 rounded-full border-[#000] flex items-center justify-center cursor-pointer">
+                            <i class="ri-linkedin-box-fill text-xl"></i>
+                        </div>
+                    
+                    </div>
+
+
                 </div>
             </div>
 
