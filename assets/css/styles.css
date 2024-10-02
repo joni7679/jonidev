@@ -119,3 +119,15 @@
 .btn:active {
     transform: scale(80%);
 }
+
+.about-right h4 span {
+    color: gray;
+}
+
+#humbuger {
+    display: none;
+}
+
+::selection{
+    background-color: #D8DDE7;
+}
