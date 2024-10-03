@@ -128,6 +128,16 @@
     display: none;
 }
 
-::selection{
+::selection {
     background-color: #D8DDE7;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        display: none !important;
+    }
+
+    #humbuger {
+        display: block !important;
+    }
 }

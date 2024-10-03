@@ -7,6 +7,10 @@
     <title>joni halder😊|®️</title>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // tailwind.config.js
+
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -21,14 +25,15 @@
     <main class="w-full overflow-hidden bg-[#BABEC8]">
 
 
-        <nav class=" flex justify-around items-center p-4">
+        <nav class=" flex justify-around items-center p-4   md:justify-between">
             <!-- Logo -->
             <div class="text-lg font-bold">
                 <a href="" class="nav-link">Logo</a>
             </div>
 
             <!-- Navbar Links -->
-            <ul class="flex space-x-8 text-lg z-9">
+
+            <ul class="flex space-x-8 text-lg z-9  menu custom-md:hidden">
                 <li><a href="#" class="nav-link hover:text-gray-700">Home</a></li>
                 <li><a href="#" class="nav-link hover:text-gray-700">About Me</a></li>
                 <li><a href="#" class="nav-link hover:text-gray-700">Services</a></li>
@@ -36,8 +41,16 @@
                 <li><a href="#" class="nav-link hover:text-gray-700">Least Works</a></li>
                 <li><a href="#" class="nav-link px-4 py-2 bg-black text-white rounded hover:bg-gray-800">Contact me</a>
                 </li>
-                <i id="humbuger" class="ri-menu-3-line cursor-pointer text-2xl"></i>
+
             </ul>
+            <div>
+                <i id="humbuger" class="ri-menu-3-line cursor-pointer text-2xl"></i>
+
+            </div>
+            <!-- Mobile Menu (Hidden by default) -->
+
+
+
         </nav>
         <!-- hero section start here -->
         <section class="hero-section  relative z-[3]">
@@ -68,7 +81,7 @@
         <!-- about section start here -->
         <section class="about-section container mx-auto px-10 w-full ">
             <h2 class="text-4xl font-bold text-center">About Me</h2>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between ">
                 <div class="about-left">
                     <img src="./assets/images/effect.png" alt="">
 
@@ -108,33 +121,35 @@
 
         </section>
         <!-- serives section -->
-        <section class="py-16 px-5 container mx-auto ">
+        <section class="py-16 px-5 container mx-auto serives-section pt-[15vh]">
             <div class="text-center">
                 <h2 class="text-4xl font-bold mb-12 text-gray-800">Our Services</h2>
 
-                <div class="sticky">
+                <div class="flex items-center justify-center flex-col pt-[15vh]">
                     <!-- Web Design Card -->
-                    <div class="hover-animate bg-gray-50 rounded-lg shadow-lg p-8 ">
-                        <div class="mb-4">
-                            <img src="https://via.placeholder.com/100" alt="Web Design" class="mx-auto">
+                    <div
+                        class="card sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
+                        <div class="mb-4 w-72">
+                            <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
+                                alt="Web Design">
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Web Design</h3>
                         <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
                             your brand.</p>
                     </div>
 
-                    <!-- Web Development Card -->
-                    <div class="hover-animate bg-gray-50 rounded-lg shadow-lg p-8">
-                        <div class="mb-4">
-                            <img src="https://via.placeholder.com/100" alt="Web Development" class="mx-auto">
+                    <div
+                        class="card sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
+                        <div class="mb-4 w-72">
+                            <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
+                                alt="Web Design">
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Web Development</h3>
-                        <p class="text-gray-600">Our development team builds high-performance websites that deliver
-                            seamless experiences.</p>
+                        <h3 class="text-xl font-semibold mb-4">Web Design</h3>
+                        <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
+                            your brand.</p>
                     </div>
-
-
                 </div>
+
             </div>
         </section>
         <!-- skill section -->
@@ -232,13 +247,13 @@
         <!-- contact section -->
         <section class="container mx-auto mt-10 p-5 w-full">
             <h2 class="text-4xl font-bold text-center">Contact Me</h2>
-            <div class="contact-tittle text-left">
-                <h2 class="text-5xl">Just say hello!</h2>
-                <p>Want to know more about me, tell me about your project</p>
+            <div class="contact-tittle px-[10%] mt-5">
+                <h2 class="text-5xl px-10">Just say hello!</h2>
+                <p class="mt-5">Want to know more about me, tell me about your project</p>
                 <p> or just to say hello? Drop me a line and I'll get back as </p>
                 <p>soon as possible.</p>
             </div>
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col mt-5">
 
 
                 <div class=" p-8 rounded-lg shadow-md w-[80%] ">

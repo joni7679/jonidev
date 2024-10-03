@@ -1,3 +1,17 @@
+
+
+// const menuBtn = document.getElementById('humbuger');
+// const mobileMenu = document.getElementById('mobile-menu');
+// let isOpen = false;
+
+// menuBtn.addEventListener('click', () => {
+//     isOpen = !isOpen;
+//     mobileMenu.classList.toggle('hidden', !isOpen);
+// });
+
+
+
+
 Shery.imageMasker(".dev-img img" /* Element to target.*/, {
     //Parameters are optional.
     mouseFollower: true,
@@ -117,3 +131,23 @@ function SkillAnimation() {
 }
 
 SkillAnimation()
+
+
+let cards = document.querySelectorAll(".card")
+cards.forEach((card) => {
+    gsap.to(card, {
+        scale: 0.7,
+        opacity: 0.6,
+
+        scrollTrigger: {
+            trigger: ".serives-section",
+            scroller: `body`,
+            start: "top 15%",
+            end: "bottom 100%",
+            markers: true,
+            // pin: true,
+            scrub: true,
+            stagger:0.2,
+        }
+    })
+})
