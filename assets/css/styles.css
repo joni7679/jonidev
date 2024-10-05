@@ -132,6 +132,55 @@
     background-color: #D8DDE7;
 }
 
+.elem {
+    text-transform: capitalize;
+}
+
+.elem .icons i {
+    transition: all 0.5s;
+}
+
+.elem .overly {
+    transform: scaleY(0);
+    padding: 0;
+    transition: all 0.5s;
+}
+
+.elem:hover>.overly {
+    height: 100%;
+    padding: 10px;
+    transform: scaleY(1);
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.elem:hover>.icons i {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.elem:hover .link-text {
+    z-index: 20;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.link-text {
+    z-index: 10;
+    opacity: 1;
+    transition: color 0.5s ease, z-index 0.5s ease;
+}
+
+.elem:hover .link-text {
+    z-index: 20;
+    color: #fff;
+    transition: color 0.5s ease, z-index 0.5s ease;
+}
+
 @media screen and (max-width: 1000px) {
     .menu {
         display: none !important;

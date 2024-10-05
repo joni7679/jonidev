@@ -12,14 +12,14 @@
 
 
 
-Shery.imageMasker(".dev-img img" /* Element to target.*/, {
-    //Parameters are optional.
-    mouseFollower: true,
-    text: "Joni",
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    debug: true,
-    duration: 1,
-});
+// Shery.imageMasker(".dev-img img" /* Element to target.*/, {
+//     //Parameters are optional.
+//     mouseFollower: true,
+//     text: "Joni",
+//     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//     debug: true,
+//     duration: 1,
+// });
 
 function homeAnimation() {
     gsap.from(".nav-link", {
@@ -43,9 +43,7 @@ function homeAnimation() {
 
     })
 }
-
 homeAnimation()
-
 let cursor = document.querySelector('.cursor');
 gsap.from(".about-right h3", {
     x: -100,
@@ -132,22 +130,73 @@ function SkillAnimation() {
 
 SkillAnimation()
 
+function socialIconsAnimation(){
+let elems = document.querySelectorAll(".elem");
 
-let cards = document.querySelectorAll(".card")
-cards.forEach((card) => {
-    gsap.to(card, {
-        scale: 0.7,
-        opacity: 0.6,
+elems.forEach((element) => {
+    // Select the image element directly
+    const imgElement = element.querySelector("img");
 
-        scrollTrigger: {
-            trigger: ".serives-section",
-            scroller: `body`,
-            start: "top 15%",
-            end: "bottom 100%",
-            markers: true,
-            // pin: true,
-            scrub: true,
-            stagger:0.2,
+    if (imgElement) { // Check if the img element exists
+        // Add event listener for mouseenter
+        element.addEventListener("mouseenter", () => {
+            // Animate the img element (opacity and scale)
+            imgElement.style.opacity = "1";
+            imgElement.style.transform = "scale(1)";
+            console.log("mouseenter");
+        });
+
+        // Add event listener for mouseleave
+        element.addEventListener("mouseleave", () => {
+            // Animate the img element (reset opacity and scale)
+            imgElement.style.opacity = "0";
+            imgElement.style.transform = "scale(0)";
+            console.log("mouseleave");
+        });
+
+        // Add event listener for mousemove
+        element.addEventListener("mousemove", (event) => {
+            // const rect = element.getBoundingClientRect(); // Get the position of .elem relative to the viewport
+            // const offsetX = event.clientX - rect.left; // Calculate X position relative to .elem
+            // const offsetY = event.clientY - rect.top; // Calculate Y position relative to .elem
+
+            // // Animate the image's position with GSAP
+            // gsap.to(imgElement, {
+            //     x: offsetX,
+            //     y: offsetY,
+            //     duration: 0.3, // Duration of the transition in seconds
+            //     ease: "power2.out"
+            // });
+        });
+    }
+});
+}
+socialIconsAnimation()
+
+function followmeTextAnimation() {
+    window.addEventListener("wheel", (val) => {
+        console.log(val.deltaY)
+        if (val.deltaY > 0) {
+            // console.log("shidda scrolling ")
+            gsap.to(".marque", {
+                transform: "translateX(-200%)",
+                duration: 2,
+                repeat: -1,
+                ease: "none"
+            })
+        }
+        else {
+            // console.log("reverse scrolling")
+            gsap.to(".marque", {
+                transform: "translateX(0%)",
+                duration: 2,
+                repeat: -1,
+                ease: "none"
+            })
         }
     })
-})
+
+
+}
+
+followmeTextAnimation()
