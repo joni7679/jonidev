@@ -181,6 +181,10 @@
     transition: color 0.5s ease, z-index 0.5s ease;
 }
 
+.contact-tittle h2{
+    color: gray;
+}
+
 @media screen and (max-width: 1000px) {
     .menu {
         display: none !important;
@@ -189,4 +193,11 @@
     #humbuger {
         display: block !important;
     }
+}
+
+@media screen and (max-width:850px) {
+    .about-section>.flex {
+        flex-direction: column;
+    }
+
 }
