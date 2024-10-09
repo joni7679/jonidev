@@ -156,19 +156,26 @@ function socialIconsAnimation() {
             });
 
             // Add event listener for mousemove
-            element.addEventListener("mousemove", (event) => {
-                // const rect = element.getBoundingClientRect(); // Get the position of .elem relative to the viewport
-                // const offsetX = event.clientX - rect.left; // Calculate X position relative to .elem
-                // const offsetY = event.clientY - rect.top; // Calculate Y position relative to .elem
-
-                // // Animate the image's position with GSAP
-                // gsap.to(imgElement, {
-                //     x: offsetX,
-                //     y: offsetY,
-                //     duration: 0.3, // Duration of the transition in seconds
-                //     ease: "power2.out"
-                // });
-            });
+            // element.addEventListener("mousemove", (event) => {
+            //     console.log(event);
+            //     const rect = element.getBoundingClientRect(); // Get the position of .elem relative to the viewport
+            //     const offsetX = event.clientX - rect.left; // Calculate X position relative to .elem
+            //     const offsetY = event.clientY - rect.top; // Calculate Y position relative to .elem
+              
+            //     if (animationTimer) {
+            //       clearTimeout(animationTimer);
+            //     }
+              
+            //     animationTimer = setTimeout(() => {
+            //       gsap.to(imgElement, {
+            //         x: offsetX,
+            //         y: offsetY,
+            //         duration: 0.3, // Duration of the transition in seconds
+            //         ease: "power2.out"
+            //       });
+            //     }, 16); // 16ms = ~60fps
+            //   });
+              
         }
     });
 }
@@ -230,7 +237,7 @@ function TextAnimation() {
 
         },
         stagger: 0.1,
-        color: "#000 !important"
+        color: "#000"
     });
 }
 TextAnimation()

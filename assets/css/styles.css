@@ -78,9 +78,10 @@
     padding: 15px 25px;
     border: 0;
     border-radius: 15px;
-    color: #212121;
+    color: #ffffff;
     z-index: 1;
-    background: #fff;
+    background: transparent;
+    border: 1px solid #000;
     position: relative;
     font-weight: 1000;
     font-size: 17px;
@@ -181,7 +182,7 @@
     transition: color 0.5s ease, z-index 0.5s ease;
 }
 
-.contact-tittle h2{
+.contact-tittle h2 {
     color: gray;
 }
 
@@ -198,6 +199,21 @@
 @media screen and (max-width:850px) {
     .about-section>.flex {
         flex-direction: column;
+    }
+
+
+}
+
+@media (max-width:825px) {
+    form {
+        flex-direction: column !important;
+        display: flex !important;
+    }
+}
+
+@media (max-width:550px) {
+    .elem {
+        width: 350px !important;
     }
 
 }
