@@ -1,4 +1,59 @@
 
+function locomotion() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+
+        // for tablet smooth
+        tablet: { smooth: true },
+
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
+
+        // follwoing line is not required to work pinning on touch screen
+
+        /* pinType: document.querySelector("main").style.transform
+          ? "transform"
+          : "fixed"*/
+    });
+
+
+
+    tl.from(".purple p", { scale: 0.3, rotation: 45, autoAlpha: 0, ease: "power2" })
+        .from(
+            ".line-3",
+            { scaleX: 0, transformOrigin: "left center", ease: "none" },
+            0
+        )
+        .to(".purple", { backgroundColor: "#28a92b" }, 0);
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+
+};
+
+// locomotion()
+
 
 // const menuBtn = document.getElementById('humbuger');
 // const mobileMenu = document.getElementById('mobile-menu');
@@ -52,6 +107,7 @@ gsap.from(".about-right h3", {
     scrollTrigger: {
         trigger: ".about-section",
         // markers: true,
+        scroller: `body`,
         scrub: 2,
         top: "top 50%",
         end: "bottom 100%"
@@ -61,7 +117,7 @@ gsap.from(".about-right h3", {
 
 function AboutTextAnimation() {
     // Select the text
-    let text = document.querySelector(".about-right h4");
+    let text = document.querySelector(".about-text");
     let clutter = "";
     // Build the clutter string
     text.textContent.split("").forEach((elem) => {
@@ -72,26 +128,25 @@ function AboutTextAnimation() {
     text.innerHTML = clutter;
 
     // GSAP animation logic controlled by ScrollTrigger
-    gsap.from(".about-right h4 span", {
-        y: 100,
-        scale: 1,
-        opacity: 0,
-        ease: "cubic-bezier(0.23, 1, 0.32, 1)", // Customize easing
+    gsap.to(".about-text span", {
+
+        // Customize easing
         scrollTrigger: {
-            trigger: ".about-section",
+            trigger: ".about-text",
             scroller: `body`,
-            start: "top 50%",
-            end: "bottom 100%",
+            start: `top 80%`,
+            end: `bottom 50%`,
+            // markers: true,
             scrub: 3,
 
         },
-        stagger: 0.1, // Adjusted to smaller stagger for better timing
+        stagger: .2,
+        color: `#000`,
     });
 }
 AboutTextAnimation()
 
 function SkillAnimation() {
-
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".skill-section",
@@ -161,11 +216,11 @@ function socialIconsAnimation() {
             //     const rect = element.getBoundingClientRect(); // Get the position of .elem relative to the viewport
             //     const offsetX = event.clientX - rect.left; // Calculate X position relative to .elem
             //     const offsetY = event.clientY - rect.top; // Calculate Y position relative to .elem
-              
+
             //     if (animationTimer) {
             //       clearTimeout(animationTimer);
             //     }
-              
+
             //     animationTimer = setTimeout(() => {
             //       gsap.to(imgElement, {
             //         x: offsetX,
@@ -175,7 +230,7 @@ function socialIconsAnimation() {
             //       });
             //     }, 16); // 16ms = ~60fps
             //   });
-              
+
         }
     });
 }
@@ -183,7 +238,7 @@ socialIconsAnimation()
 
 function followmeTextAnimation() {
     window.addEventListener("wheel", (val) => {
-        console.log(val.deltaY)
+        // console.log(val.deltaY)
         if (val.deltaY > 0) {
             // console.log("shidda scrolling ")
             gsap.to(".marque", {
@@ -222,13 +277,9 @@ function TextAnimation() {
     text.innerHTML = clutter;
 
     // GSAP animation logic controlled by ScrollTrigger
-    gsap.from(".contact-tittle h2 span", {
-        y: 100,
-        scale: 1,
-        opacity: 0,
-        ease: "cubic-bezier(0.23, 1, 0.32, 1)", // Customize easing
+    gsap.to(".contact-tittle h2 span", {
         scrollTrigger: {
-            trigger: ".contact-section",
+            trigger: ".contact-tittle",
             scroller: `body`,
             start: "top 70%",
             end: "bottom 100%",
