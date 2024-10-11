@@ -238,7 +238,7 @@ socialIconsAnimation()
 
 function followmeTextAnimation() {
     window.addEventListener("wheel", (val) => {
-        // console.log(val.deltaY)
+        console.log(val.deltaY)
         if (val.deltaY > 0) {
             // console.log("shidda scrolling ")
             gsap.to(".marque", {
@@ -263,6 +263,26 @@ function followmeTextAnimation() {
 }
 
 followmeTextAnimation()
+
+function elementAnimation() {
+    gsap.from(".elem", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".elem",
+            scroller: `body`,
+            start: "top 50%",
+            end: "bottom 20%",
+            scrub: 2,
+            // markers: true,
+        }
+    })
+}
+
+elementAnimation()
+
 
 function TextAnimation() {
     // Select the text
