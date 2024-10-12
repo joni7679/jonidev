@@ -17,11 +17,25 @@ body {
 
 main {
     width: 100%;
-
     overflow: hidden;
 }
 
-.nav-link {
+.wrapper-one {
+    position: relative;
+    width: 100vw;
+    height: 300vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.wrapper-two {
+    position: relative;
+    width: 100vw;
+    height: 300vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-link,
+.mobile-navlink {
     display: inline-block;
     ;
 }
@@ -138,7 +152,7 @@ main {
     color: gray;
 }
 
-#humbuger {
+#menu-toggle {
     display: none;
 }
 
@@ -199,13 +213,29 @@ main {
     color: gray;
 }
 
+
+.mobile-menu {
+    right: -100%;
+    transition: all 0.6s ease-in;
+}
+
 @media screen and (max-width: 1000px) {
     .menu {
         display: none !important;
     }
 
-    #humbuger {
+    #menu-toggle {
         display: block !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+
+    .active-nav {
+        right: 0;
+        transition: all 0.6s ease-in;
     }
 }
 

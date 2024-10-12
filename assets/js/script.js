@@ -1,11 +1,66 @@
 
+// First GSAP animation for loading sequence
+window.addEventListener("load", (event) => {
+    let tl = gsap.timeline({
+        onComplete: homeAnimation 
+    });
+
+    tl.to(".wrapper-one", {
+        right: "60%",
+        delay: 2,
+        duration: 4,
+    }, "a");
+
+    tl.to(".wrapper-two", {
+        left: "60%",
+        delay: 2,
+        duration: 4,
+    }, "a");
+
+    tl.to(".loader-div", {
+        opacity: 0,
+        y: "-100%",
+        duration: 0.1,
+    });
+});
+
+function menuToggleFunction(){
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active-nav");
+        console.log("hello joni")
+    });
+}
+menuToggleFunction();
+
+// Function to handle home page animations after the loading animation
+function homeAnimation() {
+    gsap.from(".nav-link", {
+        y: -100,
+        stagger: 0.1,
+    });
+
+    gsap.from(".banner h4", {
+        x: 100,
+        opacity: 0,
+        duration: 0.6,
+    });
+
+    gsap.from(".banner h5", {
+        x: -100,
+        opacity: 0,
+        duration: 0.6,
+    });
+}
+homeAnimation()
+
 function locomotion() {
     gsap.registerPlugin(ScrollTrigger);
-
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector("body"),
         smooth: true,
-
         // for tablet smooth
         tablet: { smooth: true },
 
@@ -51,21 +106,7 @@ function locomotion() {
     ScrollTrigger.refresh();
 
 };
-
 // locomotion()
-
-
-// const menuBtn = document.getElementById('humbuger');
-// const mobileMenu = document.getElementById('mobile-menu');
-// let isOpen = false;
-
-// menuBtn.addEventListener('click', () => {
-//     isOpen = !isOpen;
-//     mobileMenu.classList.toggle('hidden', !isOpen);
-// });
-
-
-
 
 // Shery.imageMasker(".dev-img img" /* Element to target.*/, {
 //     //Parameters are optional.
@@ -76,29 +117,7 @@ function locomotion() {
 //     duration: 1,
 // });
 
-function homeAnimation() {
-    gsap.from(".nav-link", {
-        y: -100,
-        stagger: 0.1,
 
-    })
-
-    gsap.from(".banner h4", {
-        x: 100,
-        opacity: 0,
-        duration: 0.6
-
-    })
-
-    gsap.from(".banner h5", {
-        x: -100,
-        opacity: 0,
-        duration: 0.6
-
-
-    })
-}
-homeAnimation()
 let cursor = document.querySelector('.cursor');
 gsap.from(".about-right h3", {
     x: -100,
@@ -113,7 +132,6 @@ gsap.from(".about-right h3", {
         end: "bottom 100%"
     }
 })
-
 
 function AboutTextAnimation() {
     // Select the text
@@ -184,7 +202,6 @@ function SkillAnimation() {
 }
 
 SkillAnimation()
-
 
 function socialIconsAnimation() {
     let elems = document.querySelectorAll(".elem");
@@ -280,9 +297,7 @@ function elementAnimation() {
         }
     })
 }
-
 elementAnimation()
-
 
 function TextAnimation() {
     // Select the text
@@ -312,3 +327,13 @@ function TextAnimation() {
     });
 }
 TextAnimation()
+
+gsap.from(".mobile-navlink", {
+    x: "-100%",
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2,
+
+})
+
+

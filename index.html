@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>joni halder😊|®️</title>
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -17,34 +17,56 @@
 </head>
 
 <body>
-    <!-- <div class="loader-div w-full h-screen fixed bg-black z-50 flex">
-        <div class="wrapper-one w-[50%] h-full bg-green-500"></div>
-        <div class="wrapper-two w-[50%] h-full bg-orange-500">
+
+    <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
+        <div
+            class="absolute z-30 w-[115%] h-screen bg-transparent top-[-10%] rotate-45 z-10 flex justify-center items-center ">
+            <div class="wrapper-one flex justify-center items-center">
+
+            </div>
+            <div class="wrapper-two flex justify-center items-center"></div>
         </div>
-    </div> -->
+    </div>
+    <main class="w-full overflow-hidden  bg-[#BABEC8] relative top-0">
+        <nav>
+            <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+                <div class="text-xl font-bold nav-link ">Logo</div>
+                <div class="menu md:flex space-x-8">
 
-    <main class="w-full  bg-[#BABEC8]">
-        <nav class=" flex justify-around items-center p-4">
-            <!-- Logo -->
-            <div class="text-lg font-bold">
-                <a href="" class="nav-link">Logo</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">About Me</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Services</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">My Skills</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Latest Works</a>
+                    
+                </div>
+                <div class="menu md:flex space-x-4">
+                    <a href="#" class="nav-link text-white px-[25px] py-[15px] rounded bg-black">Contact Me</a>
+                </div>
+                <div class="">
+                    <button class="text-gray-700 focus:outline-none" id="menu-toggle">
+                        <i class="ri-menu-3-line text-xl cursor-pointer"></i>
+                    </button>
+                </div>
             </div>
-            <!-- Navbar Links -->
-            <ul class="flex space-x-8 text-lg z-9  menu custom-md:hidden">
-                <li><a href="#" class="nav-link hover:text-gray-700">Home</a></li>
-                <li><a href="#" class="nav-link hover:text-gray-700">About Me</a></li>
-                <li><a href="#" class="nav-link hover:text-gray-700">Services</a></li>
-                <li><a href="#" class="nav-link hover:text-gray-700">My Skill</a></li>
-                <li><a href="#" class="nav-link hover:text-gray-700">Least Works</a></li>
-                <li><a href="#" class="nav-link px-4 py-2 bg-black text-white rounded hover:bg-gray-800">Contact me</a>
-                </li>
-            </ul>
-            <div>
-                <i id="humbuger" class="ri-menu-3-line cursor-pointer text-2xl"></i>
 
+            <div class="mobile-menu  bg-black text-white w-full h-full fixed z-10  overflow-hidden ">
+                <div class="flex flex-col items-center space-y-4 py-4">
+                    <a href="#" class="text-white mobile-navlink">Home</a>
+                    <a href="#" class="text-white mobile-navlink">About Me</a>
+                    <a href="#" class="text-white mobile-navlink">Services</a>
+                    <a href="#" class="text-white mobile-navlink">My Skills</a>
+                    <a href="#" class="text-white mobile-navlink">Latest Works</a>
+
+                    <div class="space-x-4">
+                        <a href="#"
+                            class="mobile-navlink text-white px-[25px] py-[15px] rounded bg-black border-2 border-[white]">Contact
+                            Me</a>
+                    </div>
+                </div>
             </div>
-            <!-- Mobile Menu (Hidden by default) -->
         </nav>
+
         <!-- hero section start here -->
         <section class="hero-section  relative z-[3]">
             <div class="flex w-full h-screen items-center justify-center flex-col uppercase ">
@@ -286,7 +308,7 @@
         <section class="container contact-section mx-auto mt-10 p-5 w-full">
             <h2 class="text-4xl font-bold text-center">Contact Me</h2>
             <div class="contact-tittle px-[10%] mt-5">
-                <h2 class="text-5xl capitalize">Just say hello!</h2>
+                <h2 class="text-5xl ">Just Say Hello!</h2>
                 <p class="mt-5">Want to know more about me, tell me about your project</p>
                 <p> or just to say hello? Drop me a line and I'll get back as </p>
                 <p>soon as possible.</p>
