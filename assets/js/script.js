@@ -329,7 +329,7 @@ function TextAnimation() {
 TextAnimation()
 
 gsap.from(".mobile-navlink", {
-    x: "-100%",
+    x: "100%",
     opacity: 0,
     duration: 0.5,
     stagger: 0.2,

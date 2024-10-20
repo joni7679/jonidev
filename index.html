@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
+    <!-- <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
         <div
             class="absolute z-30 w-[115%] h-screen bg-transparent top-[-10%] rotate-45 z-10 flex justify-center items-center ">
             <div class="wrapper-one flex justify-center items-center">
@@ -26,19 +26,19 @@
             </div>
             <div class="wrapper-two flex justify-center items-center"></div>
         </div>
-    </div>
+    </div> -->
     <main class="w-full overflow-hidden  bg-[#BABEC8] relative top-0">
         <nav>
-            <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-                <div class="text-xl font-bold nav-link ">Logo</div>
-                <div class="menu md:flex space-x-8">
+            <div class=" max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+                <div class="text-xl font-bold nav-link ">Joni Dev</div>
+                <div class=" menu md:flex w-[60%] items-center justify-center  gap-5">
 
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="#" class="px-5 nav-link text-gray-700 hover:text-blue-500">Home</a>
                     <a href="#" class="nav-link text-gray-700 hover:text-blue-500">About Me</a>
                     <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Services</a>
                     <a href="#" class="nav-link text-gray-700 hover:text-blue-500">My Skills</a>
                     <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Latest Works</a>
-                    
+
                 </div>
                 <div class="menu md:flex space-x-4">
                     <a href="#" class="nav-link text-white px-[25px] py-[15px] rounded bg-black">Contact Me</a>
@@ -110,13 +110,14 @@
 
         </section>
         <!-- serives section -->
-        <section class="py-16 px-5 container mx-auto serives-section pt-[15vh]">
+
+        <!-- <section class="py-16 px-5 container mx-auto serives-section pt-[15vh]">
             <div class="text-center">
                 <h2 class="text-4xl font-bold mb-12 text-gray-800">Our Services</h2>
 
                 <div class="flex items-center justify-center flex-col pt-[15vh]">
                     <!-- Web Design Card -->
-                    <div
+        <!-- <div
                         class="card bg-[#BABEC8]  sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
                         <div class="mb-4 w-72">
                             <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
@@ -125,8 +126,8 @@
                         <h3 class="text-xl font-semibold mb-4">Web Design</h3>
                         <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
                             your brand.</p>
-                    </div>
-                    <div
+                    </div> -->
+        <!-- <div
                         class="card bg-[#BABEC8] sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
                         <div class="mb-4 w-72">
                             <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
@@ -135,11 +136,12 @@
                         <h3 class="text-xl font-semibold mb-4">Web Devlompent</h3>
                         <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
                             your brand.</p>
-                    </div>
-                </div>
+                    </div> -->
+        <!-- </div>
 
             </div>
-        </section>
+        </section> - -->
+
         <!-- skill section -->
         <section class="skill-section w-full  container mx-auto  p-5">
             <h2 class="text-4xl font-bold text-center">My Skill</h2>
@@ -220,6 +222,20 @@
 
             </div>
         </section>
+        <!-- project section -->
+        <section class="project-section mt-5 px-5">
+            <h2 class="text-4xl font-bold text-center">My Latest Works</h2>
+
+            <div
+            class="project-card h-[300px] w-[400px] border-[1px] border-[#000] w-72 rounded-lg  flex items-center justify-center">
+            <div class="skill-box flex flex-col items-center justify-center w-full h-full">
+                <img class="h-full w-full object-cover" src="./assets/projectimages/project1.png" alt="Figma">
+               
+            </div>
+        </div>
+
+        </section>
+
 
         <section class="follow-me-section mt-5 ">
             <div class="move flex items-center justify-center p-[3vw] overflow-hidden">
@@ -315,7 +331,8 @@
             </div>
             <div class="flex items-center justify-center flex-col mt-5">
                 <div class=" p-8 rounded-lg shadow-md w-[80%] ">
-                    <form action="#" class="grid grid-cols-2 gap-6 ">
+                    <form action="" method="POST" class="grid grid-cols-2 gap-6 ">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
                         <div class="col-span-1">
                             <label for="name" class="block text-sm font-medium text-gray-700">Frist name*</label>
                             <input type="text" id="name"

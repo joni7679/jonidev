@@ -41,6 +41,8 @@ main {
 }
 
 
+
+
 .banner h5 {
     -webkit-text-stroke: 2px gray;
     color: transparent;
@@ -228,9 +230,6 @@ main {
         display: block !important;
     }
 
-    body {
-        overflow: hidden;
-    }
 
 
     .active-nav {
