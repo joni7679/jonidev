@@ -1,33 +1,84 @@
+window.onload = function () {
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 200,  // 🔥 Increase particles count
+                density: { enable: true, value_area: 800 }
+            },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: {
+                value: 0.8,
+                random: true,
+                anim: { enable: true, speed: 2, opacity_min: 0.2, sync: false }
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+            },
+            move: {
+                enable: true,
+                speed: 4,  // 🚀 Increase speed for smooth effect
+                direction: "none",
+                random: true,  // 🔄 Random movement
+                straight: false,
+                out_mode: "out",  // 🏃 Particles will not disappear
+                bounce: false,
+                attract: { enable: false, rotateX: 600, rotateY: 1200 }
+            },
+            line_linked: { enable: false }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },  // 
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                grab: { distance: 200 },
+                repulse: { distance: 100, duration: 0.4 },
+                push: { quantity: 4 },
+                remove: { quantity: 2 }
+            }
+        }
+    });
+
+};
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 // First GSAP animation for loading sequence
-window.addEventListener("load", (event) => {
-    let tl = gsap.timeline({
-        onComplete: homeAnimation 
-    });
+// window.addEventListener("load", (event) => {
+//     let tl = gsap.timeline({
+//         onComplete: homeAnimation
+//     });
 
-    tl.to(".wrapper-one", {
-        right: "60%",
-        delay: 2,
-        duration: 4,
-    }, "a");
+//     tl.to(".wrapper-one", {
+//         right: "60%",
+//         delay: 2,
+//         duration: 4,
+//     }, "a");
 
-    tl.to(".wrapper-two", {
-        left: "60%",
-        delay: 2,
-        duration: 4,
-    }, "a");
+//     tl.to(".wrapper-two", {
+//         left: "60%",
+//         delay: 2,
+//         duration: 4,
+//     }, "a");
 
-    tl.to(".loader-div", {
-        opacity: 0,
-        y: "-100%",
-        duration: 0.1,
-    });
-});
+//     tl.to(".loader-div", {
+//         opacity: 0,
+//         y: "-100%",
+//         duration: 0.1,
+//     });
+// });
 
-function menuToggleFunction(){
+function menuToggleFunction() {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.querySelector(".mobile-menu");
-    
+
     menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("active-nav");
         console.log("hello joni")
@@ -56,82 +107,32 @@ function homeAnimation() {
 }
 homeAnimation()
 
-function locomotion() {
-    gsap.registerPlugin(ScrollTrigger);
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector("body"),
-        smooth: true,
-        // for tablet smooth
-        tablet: { smooth: true },
-
-        // for mobile
-        smartphone: { smooth: true }
+function herosection() {
+    Shery.imageMasker(".dev-img img" /* Element to target.*/, {
+        //Parameters are optional.
+        mouseFollower: true,
+        text: "Joni",
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        debug: true,
+        duration: 1,
     });
-    locoScroll.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy("main", {
-        scrollTop(value) {
-            return arguments.length
-                ? locoScroll.scrollTo(value, 0, 0)
-                : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return {
-                top: 0,
-                left: 0,
-                width: window.innerWidth,
-                height: window.innerHeight
-            };
+
+    let cursor = document.querySelector('.cursor');
+    gsap.from(".about-right h3", {
+        x: -100,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".about-section",
+            scroller: `body`,
+            scrub: 2,
+            top: "top 50%",
+            end: "bottom 100%"
         }
-
-        // follwoing line is not required to work pinning on touch screen
-
-        /* pinType: document.querySelector("main").style.transform
-          ? "transform"
-          : "fixed"*/
-    });
-
-
-
-    tl.from(".purple p", { scale: 0.3, rotation: 45, autoAlpha: 0, ease: "power2" })
-        .from(
-            ".line-3",
-            { scaleX: 0, transformOrigin: "left center", ease: "none" },
-            0
-        )
-        .to(".purple", { backgroundColor: "#28a92b" }, 0);
-
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-    ScrollTrigger.refresh();
-
-};
-// locomotion()
-
-// Shery.imageMasker(".dev-img img" /* Element to target.*/, {
-//     //Parameters are optional.
-//     mouseFollower: true,
-//     text: "Joni",
-//     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-//     debug: true,
-//     duration: 1,
-// });
-
-
-let cursor = document.querySelector('.cursor');
-gsap.from(".about-right h3", {
-    x: -100,
-    opacity: 0,
-    duration: 0.6,
-    scrollTrigger: {
-        trigger: ".about-section",
-        // markers: true,
-        scroller: `body`,
-        scrub: 2,
-        top: "top 50%",
-        end: "bottom 100%"
-    }
-})
+    })
+}
+herosection()
 
 function AboutTextAnimation() {
     // Select the text
@@ -255,7 +256,7 @@ socialIconsAnimation()
 
 function followmeTextAnimation() {
     window.addEventListener("wheel", (val) => {
-        console.log(val.deltaY)
+
         if (val.deltaY > 0) {
             // console.log("shidda scrolling ")
             gsap.to(".marque", {
@@ -335,5 +336,95 @@ gsap.from(".mobile-navlink", {
     stagger: 0.2,
 
 })
+
+// validation js code
+// Add custom method for pattern validation
+function validationContact() {
+    jQuery.validator.addMethod(
+        "pattern",
+        function (value, element, param) {
+            return this.optional(element) || param.test(value);
+        },
+        "Invalid format."
+    );
+
+    $("#contactForm").validate({
+        rules: {
+            fname: {
+                required: true,
+                minlength: 3
+            },
+            lastname: { // Fixed typo here
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            phone: {
+                required: true,
+                number: true
+            },
+            project: {
+                required: true,
+                minlength: 10
+            }
+        },
+        messages: {
+            fname: {
+                required: "Please enter your First name",
+                minlength: "Your name must be at least 3 characters long"
+            },
+            lastname: {
+                required: "Please enter your Last name",
+                minlength: "Your name must be at least 3 characters long"
+            },
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address"
+            },
+            phone: {
+                required: "Please enter your Phone Number",
+                pattern: "Please enter a valid Phone Number (10 digits)"
+            },
+            project: {
+                required: "Please enter a project",
+                minlength: "Your project message must be at least 10 characters long"
+            }
+        },
+        submitHandler: function (form) {
+            alert("Form submitted successfully!");
+            form.reset(); // Resets the form after successful submission
+        }
+    });
+
+}
+validationContact()
+
+function ProjectShowcase() {
+    let projectTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".project-section",
+            scroller: "body",
+            start: "50% 50%",
+            end: "200% 50%",
+            scrub: 1,
+            pin: true,
+            // markers: true,
+        }
+    });
+
+    projectTl
+        .to("#Project-1", { top: "50%", ease: "power2.out" }, "a")
+        .to("#Project-2", { top: "50%", ease: "power2.out" }, "a+=0.2")
+        .to("#Project-3", { top: "50%", ease: "power2.out" }, "a+=0.4")
+        .to("#Project-4", { top: "50%", ease: "power2.out" }, "a+=0.6")
+        .to("#Project-5", { top: "50%", ease: "power2.out" }, "a+=0.8");
+
+}
+
+ProjectShowcase()
+
 
 

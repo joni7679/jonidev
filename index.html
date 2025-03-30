@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to Joni Halder's Portfolio! A passionate Frontend Web Developer and aspiring FullStack Developer with expertise in HTML, CSS, JavaScript, React.js, Tailwind CSS, and GSAP. Explore my projects, skills, and journey in web development. Let's build something amazing together!">
+    <meta name="keywords"
+        content="Joni Halder, Frontend Developer, FullStack Developer, Web Development, React.js, JavaScript, HTML, CSS, Tailwind CSS, GSAP, Portfolio, Projects, Freelance Developer, UI/UX Design">
+
     <title>joni halder😊|®️</title>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,6 +18,7 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -27,7 +33,7 @@
             <div class="wrapper-two flex justify-center items-center"></div>
         </div>
     </div> -->
-    <main class="w-full overflow-hidden  bg-[#BABEC8] relative top-0">
+    <main class="w-full   bg-[#BABEC8] relative top-0">
         <nav>
             <div class=" max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
                 <div class="text-xl font-bold nav-link ">Joni Dev</div>
@@ -41,7 +47,7 @@
 
                 </div>
                 <div class="menu md:flex space-x-4">
-                    <a href="#" class="nav-link text-white px-[25px] py-[15px] rounded bg-black">Contact Me</a>
+                    <a href="#" class="btn2">Contact Me</a>
                 </div>
                 <div class="">
                     <button class="text-gray-700 focus:outline-none" id="menu-toggle">
@@ -59,8 +65,7 @@
                     <a href="#" class="text-white mobile-navlink">Latest Works</a>
 
                     <div class="space-x-4">
-                        <a href="#"
-                            class="mobile-navlink text-white px-[25px] py-[15px] rounded bg-black border-2 border-[white]">Contact
+                        <a href="#" class="btn2">Contact
                             Me</a>
                     </div>
                 </div>
@@ -68,25 +73,28 @@
         </nav>
 
         <!-- hero section start here -->
-        <section class="hero-section  relative z-[3]">
-            <div class="flex w-full h-screen items-center justify-center flex-col uppercase ">
+        <section class="hero-section relative z-[3]">
+            <div id="particles-js"></div>
+            <div class="flex w-full h-screen items-center justify-center flex-col uppercase">
                 <div class="text-center absolute top-0 banner">
-                    <h6 class="text-xl font-semibold text-gray-700">Hi 👋, my name is Joni halder and I am a freelancer
+                    <h6 class="text-xl font-semibold text-gray-700">Hi 👋, my name is Joni Halder and I am a freelancer
                     </h6>
-                    <h4 class="lg:text-6xl md:text-5xl font-bold text-black sm:text-3xl">WEBSITE DEVELOPER</h4>
-                    <h5 class="lg:text-6xl md:text-5xl font-bold text-black sm:text-3xl">& WEBSITE DESIGNER </h5>
+                    <h4 class="lg:text-6xl md:text-5xl font-bold text-black">WEBSITE DEVELOPER</h4>
+                    <h5 class="lg:text-6xl md:text-5xl font-bold text-black">& WEBSITE DESIGNER</h5>
                 </div>
                 <div class="dev-img absolute top-[-12px] flex flex-col items-center justify-around">
                     <img class="mt-[20px]" src="./assets/images/joni-dev.png" alt="">
-                    <div class="flex  gap-[80px] z-10 absolute top-[85%]">
-                        <a href="#" class="btn">Hire
-                            Me</a>
-                        <a href="#" class="btn2">Download
-                            CV</a>
+                    <div class="flex gap-[80px] z-10 absolute top-[85%]">
+                        <a href="#" class="btn">Hire Me</a>
+                        <a href="#" class="btn2">Download CV</a>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+
         <!-- about section start here -->
         <section class="about-section container mx-auto px-10 w-full ">
             <h2 class="text-4xl font-bold text-center">About Me</h2>
@@ -97,11 +105,12 @@
                 </div>
                 <div class="about-right w-[50%]">
                     <h3 class="text-xl font-semibold text-gray-700">Hi 👋, my name is Joni halder</h3>
-                    <h4 class="max-w-sm about-text text-[#ddd] w-[300px]">I’m a passionate Frontend Web Developer skilled in HTML,
+                    <h4 class="max-w-sm about-text text-[#ddd] w-[300px]">I'm a passionate Frontend Web Developer
+                        skilled in HTML,
                         CSS,
                         JavaScript, React.js, and modern
                         frameworks like Tailwind CSS and GSAP. Explore my projects showcasing dynamic UI design,
-                        responsive layouts, and innovative animations. Let’s create exceptional web experiences
+                        responsive layouts, and innovative animations. Let's create exceptional web experiences
                         together!</h4>
                     <button href="#" class="btn2 mt-5">Download
                         CV</button>
@@ -109,38 +118,7 @@
             </div>
 
         </section>
-        <!-- serives section -->
 
-        <!-- <section class="py-16 px-5 container mx-auto serives-section pt-[15vh]">
-            <div class="text-center">
-                <h2 class="text-4xl font-bold mb-12 text-gray-800">Our Services</h2>
-
-                <div class="flex items-center justify-center flex-col pt-[15vh]">
-                    <!-- Web Design Card -->
-        <!-- <div
-                        class="card bg-[#BABEC8]  sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
-                        <div class="mb-4 w-72">
-                            <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
-                                alt="Web Design">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Web Design</h3>
-                        <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
-                            your brand.</p>
-                    </div> -->
-        <!-- <div
-                        class="card bg-[#BABEC8] sticky top-[15vh] p-8 border-[1px] border-[#000] w-[500px] rounded-lg flex items-center justify-center flex-col">
-                        <div class="mb-4 w-72">
-                            <img class="w-full h-full object-cover mx-auto" src="./assets/images/web-design.png"
-                                alt="Web Design">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Web Devlompent</h3>
-                        <p class="text-gray-600">We create beautiful, modern, and responsive website designs tailored to
-                            your brand.</p>
-                    </div> -->
-        <!-- </div>
-
-            </div>
-        </section> - -->
 
         <!-- skill section -->
         <section class="skill-section w-full  container mx-auto  p-5">
@@ -219,23 +197,37 @@
                         <h3 class="text-xl text-gray-700 uppercase mt-2">react</h3>
                     </div>
                 </div>
+                <div
+                    class="skill-iteam border-[1px] border-[#000] w-72 rounded-lg py-[10px] px-[25px] flex items-center justify-center">
+                    <div class="skill-box flex flex-col items-center justify-center">
+                        <img class="h-24 w-24 object-contain" src="https://miro.medium.com/v2/resize:fit:1000/1*wQ5SsWOSoTFRjlnFYXPOiA.png" alt="React">
+                        <h3 class="text-xl text-gray-700 uppercase mt-2">redux tollkit</h3>
+                    </div>
+                </div>
 
             </div>
         </section>
-        <!-- project section -->
-        <!-- <section class="project-section mt-5 px-5">
-            <h2 class="text-4xl font-bold text-center">My Latest Works</h2>
+        <section class="project-container container mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-center mb-8">My Project Showcase</h1>
 
-            <div
-            class="project-card h-[300px] w-[400px] border-[1px] border-[#000] w-72 rounded-lg  flex items-center justify-center">
-            <div class="skill-box flex flex-col items-center justify-center w-full h-full">
-                <img class="h-full w-full object-cover" src="./assets/projectimages/project1.png" alt="Figma">
-               
+            <div class="project-section h-[100vh] relative">
+
+                <div class="project-card  p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
+                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-red-800" id="Project-1">
+
+                </div>
+                <div class="project-card p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
+                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-green-800" id="Project-2">
+
+                </div>
+
+                <div class="project-card p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
+                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-yellow-800" id="Project-3">
+
+                </div>
+
             </div>
-        </div>
-
-        </section> -->
-
+        </section>
 
         <section class="follow-me-section mt-5 ">
             <div class="move flex items-center justify-center p-[3vw] overflow-hidden">
@@ -330,54 +322,99 @@
                 <p>soon as possible.</p>
             </div>
             <div class="flex items-center justify-center flex-col mt-5">
-                <div class=" p-8 rounded-lg shadow-md w-[80%] ">
-                    <form action="" method="POST" class="grid grid-cols-2 gap-6 ">
+                <div class="p-8 rounded-lg shadow-md w-[80%]">
+                    <form autocomplete="off" action="https://api.web3forms.com/submit" method="POST" id="contactForm"
+                        class="grid grid-cols-2 gap-6">
+
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
                         <div class="col-span-1">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Frist name*</label>
-                            <input type="text" id="name"
+                            <label for="fname" class="block text-sm font-medium text-gray-700">First Name*</label>
+                            <input type="text" id="fname" name="fname"
                                 class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md border-[#000] shadow-sm p-2 focus:outline-none focus:ring-gray-800 focus:border-gray-800"
-                                required>
+                                required />
                         </div>
+
                         <div class="col-span-1">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Last name*</label>
-                            <input type="text" id="name"
-                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2  border-[#000]  focus:outline-none focus:ring-gray-800 focus:border-gray-800"
-                                required>
+                            <label for="lastname" class="block text-sm font-medium text-gray-700">Last Name*</label>
+                            <input type="text" id="lastname" name="lastname"
+                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2 border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800"
+                                required />
                         </div>
+
                         <div class="col-span-1">
                             <label for="email" class="block text-sm font-medium text-gray-700">Email*</label>
-                            <input type="email" id="email"
-                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2  border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800"
-                                required>
+                            <input type="email" id="email" name="email"
+                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2 border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800"
+                                required />
                         </div>
+
                         <div class="col-span-1">
                             <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                            <input type="tel" id="phone"
-                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2  border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800" ">
-                    </div>
-                    <div class=" col-span-2">
+                            <input type="tel" id="phone" name="phone"
+                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2 border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800" />
+                        </div>
+
+                        <div class="col-span-2">
                             <label for="project" class="block text-sm font-medium text-gray-700">A few words about your
                                 project*</label>
-                            <textarea id="project" rows="4"
-                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2  border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800" "
-                            required></textarea>
-                    </div>
+                            <textarea id="project" rows="4" name="project"
+                                class="mt-1 block w-full border-b bg-[#BABEC8] rounded-md shadow-sm p-2 border-[#000] focus:outline-none focus:ring-gray-800 focus:border-gray-800"
+                                required></textarea>
+                        </div>
 
-                    <button class=" btn">Submit Reauest</button>
-                </form>
+                        <button type="submit" class="btn">Submit Request</button>
+                    </form>
+                </div>
+
             </div>
-        </div>
 
 
         </section>
 
+        <footer class="bg-black text-gray-300 py-10">
+            <div class="container mx-auto px-5 flex flex-col md:flex-row justify-between items-center">
+                <!-- Left Section -->
+                <div class="text-left space-y-3">
+                    <h2 class="text-2xl font-bold text-gray-100">Let's Connect</h2>
+                    <p class="flex items-center gap-2"><span>&#9993;</span> jonihalder814@gmil.com</p>
+                    <p class="flex items-center gap-2"><span>&#128205;</span> Gangarampur, Dakshin Dinajpur, West Bengal
+                    </p>
+
+                </div>
+
+                <!-- Right Section -->
+                <div class="text-right mt-5 md:mt-0">
+                    <h2 class="text-xl font-bold text-gray-100">Follow Me</h2>
+                    <div class="flex gap-4 mt-2">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-600">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                alt="GitHub" class="w-6 h-6">
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-600">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                                alt="LinkedIn" class="w-6 h-6">
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-600">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"
+                                class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="text-center text-gray-400 mt-10 border-t border-gray-800 pt-5">
+                <p>&copy; 2025 Joni Halder Designed & Developed With <span class="text-red-500">❤️</span> Joni Halder
+                </p>
+            </div>
+        </footer>
 
 
-   
 
 
-<script src=" https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    </main>
+    <script src=" https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <!--  Gsap is needed for Basic Effects -->
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -391,9 +428,12 @@
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
 
-    <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

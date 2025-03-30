@@ -76,6 +76,7 @@ main {
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .btn2::before {
@@ -118,6 +119,7 @@ main {
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .btn::before {
@@ -162,6 +164,16 @@ main {
     background-color: #D8DDE7;
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
 .elem {
     text-transform: capitalize;
 }
@@ -199,6 +211,10 @@ main {
     transition: all 0.5s ease;
 }
 
+.project-container {
+    position: relative;
+}
+
 .link-text {
     z-index: 10;
     opacity: 1;
@@ -211,8 +227,43 @@ main {
     transition: color 0.5s ease, z-index 0.5s ease;
 }
 
+
+/* prject showcase */
+
+
 .contact-tittle h2 {
     color: gray;
+}
+
+label.error {
+    color: rgb(234, 57, 57);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+/* projects */
+.project-section {
+    overflow: hidden;
+}
+
+.project-card {
+    transform: translateX(-50%);
+    background: white;
+}
+
+/* Corrected ID names */
+#Project-1 {
+    top: 30%;
+}
+
+#Project-2 {
+    top: 160%;
+}
+
+#Project-3 {
+    top: 260%;
 }
 
 
