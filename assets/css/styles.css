@@ -40,6 +40,96 @@ main {
     ;
 }
 
+/* Menu Icon Styles */
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.bars {
+    width: 30px;
+    height: 4px;
+    background: #000;
+    position: relative;
+}
+
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.bars::before {
+    top: -8px;
+}
+
+.bars::after {
+    top: 8px;
+}
+
+/* Mobile Menu Styles */
+/* .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    right: -100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+.mobile-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.mobile-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Close Button Styles */
+.close-btn div::before,
+.close-btn div::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    transition: background 0.5s ease;
+}
+
+.close-btn div::before {
+    transform: rotate(-45deg);
+}
+
+.close-btn div::after {
+    transform: rotate(45deg);
+}
+
+.close-btn:hover div::before,
+.close-btn:hover div::after {
+    background: #ff3333;
+}
 
 
 
@@ -156,9 +246,34 @@ main {
     color: gray;
 }
 
-#menu-toggle {
+.menu-icon {
     display: none;
 }
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    margin-bottom: -2px;
+    background: linear-gradient(to right, #199494, #fff);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.mobile-menu {
+    overflow: hidden;
+}
+
 
 ::selection {
     background-color: #D8DDE7;
@@ -268,16 +383,18 @@ label.error {
 
 
 .mobile-menu {
-    right: -100%;
+
     transition: all 0.6s ease-in;
 }
+
+
 
 @media screen and (max-width: 1000px) {
     .menu {
         display: none !important;
     }
 
-    #menu-toggle {
+    .menu-icon {
         display: block !important;
     }
 

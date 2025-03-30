@@ -24,7 +24,7 @@
 
 <body>
 
-    <!-- <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
+    <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
         <div
             class="absolute z-30 w-[115%] h-screen bg-transparent top-[-10%] rotate-45 z-10 flex justify-center items-center ">
             <div class="wrapper-one flex justify-center items-center">
@@ -32,44 +32,53 @@
             </div>
             <div class="wrapper-two flex justify-center items-center"></div>
         </div>
-    </div> -->
+    </div>
+    
     <main class="w-full   bg-[#BABEC8] relative top-0">
         <nav>
             <div class=" max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
                 <div class="text-xl font-bold nav-link ">Joni Dev</div>
                 <div class=" menu md:flex w-[60%] items-center justify-center  gap-5">
 
-                    <a href="#" class="px-5 nav-link text-gray-700 hover:text-blue-500">Home</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">About Me</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Services</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">My Skills</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-500">Latest Works</a>
+                    <a href="#" class="px-5 nav-link text-gray-700 hover:text-gray-900 relative">Home</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 relative">About Me</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 relative">Services</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 relative">My Skills</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 relative">Latest Works</a>
 
                 </div>
                 <div class="menu md:flex space-x-4">
                     <a href="#" class="btn2">Contact Me</a>
                 </div>
-                <div class="">
-                    <button class="text-gray-700 focus:outline-none" id="menu-toggle">
-                        <i class="ri-menu-3-line text-xl cursor-pointer"></i>
-                    </button>
+
+            </div>
+
+            <!-- Menu Icon -->
+            <div class="menu-icon fixed top-5 right-5 z-20 cursor-pointer">
+                <div class="bars">
+                    <div class="bar"></div>
                 </div>
             </div>
 
-            <div class="mobile-menu  bg-black text-white w-full h-full fixed z-10  overflow-hidden ">
-                <div class="flex flex-col items-center space-y-4 py-4">
-                    <a href="#" class="text-white mobile-navlink">Home</a>
-                    <a href="#" class="text-white mobile-navlink">About Me</a>
-                    <a href="#" class="text-white mobile-navlink">Services</a>
-                    <a href="#" class="text-white mobile-navlink">My Skills</a>
-                    <a href="#" class="text-white mobile-navlink">Latest Works</a>
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu fixed w-full h-screen bg-black text-white right-[-100vw] z-10">
+                <h2 class="brand-text absolute top-[5%] left-[5%] text-2xl opacity-0">Joni Dev</h2>
 
-                    <div class="space-x-4">
-                        <a href="#" class="btn2">Contact
-                            Me</a>
-                    </div>
+                <div class="close-btn absolute top-[5%] right-[5%] w-8 h-8 cursor-pointer opacity-0">
+                    <div></div>
                 </div>
-            </div>
+
+                <ul class="flex flex-col items-center justify-center h-full">
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">Home</a></li>
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">About Me</a></li>
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">Services</a></li>
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">My Skills</a></li>
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">Latest Works</a>
+                    </li>
+                    <li class="my-6"><a href="#" class="mobile-link text-3xl font-medium opacity-0">Contact</a></li>
+                </ul>
+            </nav>
+
         </nav>
 
         <!-- hero section start here -->
@@ -200,7 +209,8 @@
                 <div
                     class="skill-iteam border-[1px] border-[#000] w-72 rounded-lg py-[10px] px-[25px] flex items-center justify-center">
                     <div class="skill-box flex flex-col items-center justify-center">
-                        <img class="h-24 w-24 object-contain" src="https://miro.medium.com/v2/resize:fit:1000/1*wQ5SsWOSoTFRjlnFYXPOiA.png" alt="React">
+                        <img class="h-24 w-24 object-contain"
+                            src="https://miro.medium.com/v2/resize:fit:1000/1*wQ5SsWOSoTFRjlnFYXPOiA.png" alt="React">
                         <h3 class="text-xl text-gray-700 uppercase mt-2">redux tollkit</h3>
                     </div>
                 </div>

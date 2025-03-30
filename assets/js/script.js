@@ -46,43 +46,53 @@ window.onload = function () {
 
 };
 
+// function responsivenav() {
 
+// }
+// responsivenav()
 
 gsap.registerPlugin(ScrollTrigger);
 
 // First GSAP animation for loading sequence
-// window.addEventListener("load", (event) => {
-//     let tl = gsap.timeline({
-//         onComplete: homeAnimation
-//     });
+window.addEventListener("load", (event) => {
+    let tl = gsap.timeline({
+        onComplete: homeAnimation
+    });
 
-//     tl.to(".wrapper-one", {
-//         right: "60%",
-//         delay: 2,
-//         duration: 4,
-//     }, "a");
+    tl.to(".wrapper-one", {
+        right: "60%",
+        delay: 2,
+        duration: 4,
+    }, "a");
 
-//     tl.to(".wrapper-two", {
-//         left: "60%",
-//         delay: 2,
-//         duration: 4,
-//     }, "a");
+    tl.to(".wrapper-two", {
+        left: "60%",
+        delay: 2,
+        duration: 4,
+    }, "a");
 
-//     tl.to(".loader-div", {
-//         opacity: 0,
-//         y: "-100%",
-//         duration: 0.1,
-//     });
-// });
+    tl.to(".loader-div", {
+        opacity: 0,
+        y: "-100%",
+        duration: 0.1,
+    },'b');
+});
 
 function menuToggleFunction() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
+    // Initialize GSAP
+    gsap.registerPlugin(ScrollTrigger);
 
-    menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active-nav");
-        console.log("hello joni")
-    });
+    // Menu Animation
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeBtn = document.querySelector('.close-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-link');
+    const brandText = document.querySelector('.brand-text');
+    menuIcon.addEventListener("click",()=>{
+        console.log("hello nav");
+        
+    })
+
 }
 menuToggleFunction();
 
