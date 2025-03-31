@@ -1,3 +1,44 @@
+function loco() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("main"),
+        smooth: true,
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    // tell ScrollTrigger to use these proxy methods for the "main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy("main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight,
+            };
+        },
+        // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+        pinType: document.querySelector("main").style.transform
+            ? "transform"
+            : "fixed",
+    });
+
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+}
+loco();
+
 window.onload = function () {
     particlesJS("particles-js", {
         particles: {
@@ -75,7 +116,7 @@ window.addEventListener("load", (event) => {
         opacity: 0,
         y: "-100%",
         duration: 0.1,
-    },'b');
+    }, 'b');
 });
 
 function menuToggleFunction() {
@@ -88,9 +129,9 @@ function menuToggleFunction() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const menuLinks = document.querySelectorAll('.mobile-link');
     const brandText = document.querySelector('.brand-text');
-    menuIcon.addEventListener("click",()=>{
+    menuIcon.addEventListener("click", () => {
         console.log("hello nav");
-        
+
     })
 
 }
@@ -117,16 +158,21 @@ function homeAnimation() {
 }
 homeAnimation()
 
-function herosection() {
-    Shery.imageMasker(".dev-img img" /* Element to target.*/, {
-        //Parameters are optional.
-        mouseFollower: true,
-        text: "Joni",
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        debug: true,
-        duration: 1,
-    });
 
+function herosection() {
+
+
+    if (typeof Shery !== "undefined") {
+        Shery.imageMasker(".dev-img img", {
+            mouseFollower: true,
+            text: "Joni",
+            ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+            debug: true,
+            duration: 1,
+        });
+    } else {
+        console.error("Shery.js is not loaded properly.");
+    }
 
     let cursor = document.querySelector('.cursor');
     gsap.from(".about-right h3", {
@@ -135,7 +181,7 @@ function herosection() {
         duration: 0.6,
         scrollTrigger: {
             trigger: ".about-section",
-            scroller: `body`,
+            scroller: `main`,
             scrub: 2,
             top: "top 50%",
             end: "bottom 100%"
@@ -162,7 +208,7 @@ function AboutTextAnimation() {
         // Customize easing
         scrollTrigger: {
             trigger: ".about-text",
-            scroller: `body`,
+            scroller: `main`,
             start: `top 80%`,
             end: `bottom 50%`,
             // markers: true,
@@ -179,7 +225,7 @@ function SkillAnimation() {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".skill-section",
-            scroller: `body`,
+            scroller: `main`,
             start: "top 50%",
             end: "bottom 100%",
             markers: false,
@@ -300,7 +346,7 @@ function elementAnimation() {
         stagger: 0.2,
         scrollTrigger: {
             trigger: ".elem",
-            scroller: `body`,
+            scroller: `main`,
             start: "top 50%",
             end: "bottom 20%",
             scrub: 2,
@@ -326,7 +372,7 @@ function TextAnimation() {
     gsap.to(".contact-tittle h2 span", {
         scrollTrigger: {
             trigger: ".contact-tittle",
-            scroller: `body`,
+            scroller: `main`,
             start: "top 70%",
             end: "bottom 100%",
             scrub: 3,
@@ -346,6 +392,45 @@ gsap.from(".mobile-navlink", {
     stagger: 0.2,
 
 })
+
+
+function circleTextAnimation() {
+    const text = "JONI*HALDER*";
+    const container = document.querySelector(".circle-text");
+
+    for (let i = 0; i < text.length; i++) {
+        let span = document.createElement("span");
+        span.innerText = text[i];
+        let angle = (360 / text.length) * i;
+        let radius = 50;
+
+        let x = Math.cos((angle * Math.PI) / 180) * radius;
+        let y = Math.sin((angle * Math.PI) / 180) * radius;
+
+        span.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+        container.appendChild(span);
+    }
+
+    // Rotation Animation
+    let rotation = 0;
+    let speed = 1; // Normal speed
+    let interval = setInterval(() => {
+        rotation += speed;
+        container.style.transform = `rotate(${rotation}deg)`;
+    }, 50);
+
+    // Reverse direction on hover
+    container.addEventListener("mouseenter", () => {
+        speed = -1;
+    });
+
+    // Normal direction when mouse leaves
+    container.addEventListener("mouseleave", () => {
+        speed = 1;
+    });
+
+}
+circleTextAnimation()
 
 // validation js code
 // Add custom method for pattern validation
@@ -413,26 +498,22 @@ function validationContact() {
 validationContact()
 
 function ProjectShowcase() {
-    let projectTl = gsap.timeline({
+    gsap.to(".project-wrapper", {
+        x: () => -document.querySelector(".project-wrapper").scrollWidth + window.innerWidth,  
+        ease: "power1.out",
         scrollTrigger: {
-            trigger: ".project-section",
-            scroller: "body",
-            start: "50% 50%",
-            end: "200% 50%",
-            scrub: 1,
-            pin: true,
-            // markers: true,
+            trigger: ".project-container",
+            // scroller: "main",
+            markers: true,
+            start: "top top",
+            end: "+=300px",
+ 
+            scrub: true,
+            pin: true
         }
     });
-
-    projectTl
-        .to("#Project-1", { top: "50%", ease: "power2.out" }, "a")
-        .to("#Project-2", { top: "50%", ease: "power2.out" }, "a+=0.2")
-        .to("#Project-3", { top: "50%", ease: "power2.out" }, "a+=0.4")
-        .to("#Project-4", { top: "50%", ease: "power2.out" }, "a+=0.6")
-        .to("#Project-5", { top: "50%", ease: "power2.out" }, "a+=0.8");
-
 }
+
 
 ProjectShowcase()
 

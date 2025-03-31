@@ -132,6 +132,30 @@ main {
 }
 
 
+.circle-text {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: bold;
+    transform-origin: center;
+}
+.circle-text:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.circle-text span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+}
+
 
 .banner h5 {
     -webkit-text-stroke: 2px gray;
@@ -358,28 +382,7 @@ label.error {
 
 
 
-/* projects */
-.project-section {
-    overflow: hidden;
-}
 
-.project-card {
-    transform: translateX(-50%);
-    background: white;
-}
-
-/* Corrected ID names */
-#Project-1 {
-    top: 30%;
-}
-
-#Project-2 {
-    top: 160%;
-}
-
-#Project-3 {
-    top: 260%;
-}
 
 
 .mobile-menu {

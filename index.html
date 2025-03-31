@@ -24,20 +24,22 @@
 
 <body>
 
-    <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
+    <!-- <div class="loader-div w-screen h-screen z-20   flex fixed top-0 overflow-hidden">
         <div
             class="absolute z-30 w-[115%] h-screen bg-transparent top-[-10%] rotate-45 z-10 flex justify-center items-center ">
             <div class="wrapper-one flex justify-center items-center">
 
             </div>
-            <div class="wrapper-two flex justify-center items-center"></div>
+            <div class="wrapper-two flex justify-center items-center">
+
+            </div>
         </div>
-    </div>
-    
+    </div> -->
     <main class="w-full   bg-[#BABEC8] relative top-0">
         <nav>
             <div class=" max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-                <div class="text-xl font-bold nav-link ">Joni Dev</div>
+                <div class="circle-text"></div>
+
                 <div class=" menu md:flex w-[60%] items-center justify-center  gap-5">
 
                     <a href="#" class="px-5 nav-link text-gray-700 hover:text-gray-900 relative">Home</a>
@@ -206,6 +208,7 @@
                         <h3 class="text-xl text-gray-700 uppercase mt-2">react</h3>
                     </div>
                 </div>
+                <!-- redux -->
                 <div
                     class="skill-iteam border-[1px] border-[#000] w-72 rounded-lg py-[10px] px-[25px] flex items-center justify-center">
                     <div class="skill-box flex flex-col items-center justify-center">
@@ -217,25 +220,104 @@
 
             </div>
         </section>
-        <section class="project-container container mx-auto px-6 py-12">
+        <!-- Project Section -->
+        <section class="project-container container mx-auto px-6 py-12 overflow-hidden">
             <h1 class="text-4xl font-bold text-center mb-8">My Project Showcase</h1>
 
-            <div class="project-section h-[100vh] relative">
+            <div class="project-section h-[100vh] flex items-center">
+            
+                <div class="project-wrapper relative flex space-x-10 w-max">
 
-                <div class="project-card  p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
-                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-red-800" id="Project-1">
+                    <!-- Project 1 -->
+                    <div class="project-card p-6 rounded-lg shadow-lg w-[400px] h-[450px] bg-gray-800 text-white">
+                        <div class="project-img w-full h-[250px]">
+                            <img loading="lazy" class="w-full h-full object-cover"
+                                src="./assets/projectimages/Country.png" alt="Country Explorer">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold">🌍 Country Explorer</h3>
+                            <p class="text-sm mt-2">A web app that provides real-time country details.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="#" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600 transition">Live
+                                    Demo</a>
+                                <a href="#" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-800 transition">GitHub
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Project 2 -->
+                    <div class="project-card p-6 rounded-lg shadow-lg w-[400px] h-[450px] bg-gray-800 text-white">
+                        <div class="project-img w-full h-[250px]">
+                            <img loading="lazy" class="w-full h-full object-cover"
+                                src="./assets/projectimages/project1.png" alt="Project 2">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold">💻 Web Dashboard</h3>
+                            <p class="text-sm mt-2">A beautiful dashboard for managing data.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="#" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600 transition">Live
+                                    Demo</a>
+                                <a href="#" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-800 transition">GitHub
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card p-6 rounded-lg shadow-lg w-[400px] h-[450px] bg-gray-800 text-white">
+                        <div class="project-img w-full h-[250px]">
+                            <img loading="lazy" class="w-full h-full object-cover"
+                                src="./assets/projectimages/empmangeSystem.png" alt="Employee System">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold">📊 Employee Management</h3>
+                            <p class="text-sm mt-2">Manage employees with a modern UI.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="#" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600 transition">Live
+                                    Demo</a>
+                                <a href="#" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-800 transition">GitHub
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card p-6 rounded-lg shadow-lg w-[400px] h-[450px] bg-gray-800 text-white">
+                        <div class="project-img w-full h-[250px]">
+                            <img loading="lazy" class="w-full h-full object-cover"
+                                src="./assets/projectimages/empmangeSystem.png" alt="Employee System">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold">📊 Employee Management</h3>
+                            <p class="text-sm mt-2">Manage employees with a modern UI.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="#" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600 transition">Live
+                                    Demo</a>
+                                <a href="#" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-800 transition">GitHub
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card p-6 rounded-lg shadow-lg w-[400px] h-[450px] bg-gray-800 text-white">
+                        <div class="project-img w-full h-[250px]">
+                            <img loading="lazy" class="w-full h-full object-cover"
+                                src="./assets/projectimages/empmangeSystem.png" alt="Employee System">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold">📊 Employee Management</h3>
+                            <p class="text-sm mt-2">Manage employees with a modern UI.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="#" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600 transition">Live
+                                    Demo</a>
+                                <a href="#" class="px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-800 transition">GitHub
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
-                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-green-800" id="Project-2">
-
-                </div>
-
-                <div class="project-card p-6 rounded-lg shadow-lg  w-[70%] h-[300px] max-sm:h-[50vh] max-sm:w-[95%] 
-                absolute top-1/2    left-1/2 transform -translate-x-1/2 bg-yellow-800" id="Project-3">
-
-                </div>
-
             </div>
         </section>
 
@@ -431,12 +513,15 @@
     <!-- Scroll Trigger is needed for Scroll Effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Three.js is needed for 3d Effects -->
+    <!-- Include Three.js (for 3D effects) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
-    <!-- ControlKit is needed for Debug Panel -->
+    <!-- Include ControlKit.js (for Debug Panel) -->
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+
+    <!-- Include Shery.js (Main Library) -->
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
