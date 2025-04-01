@@ -158,7 +158,6 @@ function homeAnimation() {
 }
 homeAnimation()
 
-
 function herosection() {
 
 
@@ -503,17 +502,15 @@ function ProjectShowcase() {
         ease: "power1.out",
         scrollTrigger: {
             trigger: ".project-container",
-            // scroller: "main",
-            markers: true,
+            scroller: "main",
+            // markers: true,
             start: "top top",
             end: "+=300px",
- 
-            scrub: true,
+            scrub: 3,
             pin: true
         }
     });
 }
-
 
 ProjectShowcase()
 

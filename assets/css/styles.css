@@ -7,6 +7,39 @@
 
 }
 
+@font-face {
+    font-family: "montserrat-latin-400";
+    src: url("../fonts/montserrat-latin-400-normal.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-latin-500";
+    src: url("../fonts/montserrat-latin-500-normal.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-latin-600";
+    src: url("../fonts/montserrat-latin-600-normal.ttf");
+}
+
+
+@font-face {
+    font-family: "montserrat-latin-700";
+    src: url("../fonts/montserrat-latin-700-normal.ttf");
+}
+
+
+@font-face {
+    font-family: "montserrat-latin-800";
+    src: url("../fonts/montserrat-latin-800-normal.ttf");
+}
+
+@font-face {
+    font-family: "montserrat-latin-900";
+    src: url("../fonts/montserrat-latin-900-normal.ttf");
+}
+
+
 
 html,
 body {
@@ -26,6 +59,8 @@ main {
     height: 300vh;
     background-color: rgb(0, 0, 0);
 }
+
+
 
 .wrapper-two {
     position: relative;
@@ -144,7 +179,8 @@ main {
     font-weight: bold;
     transform-origin: center;
 }
-.circle-text:hover{
+
+.circle-text:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -283,7 +319,7 @@ main {
     height: 3px;
     border-radius: 5px;
     margin-bottom: -2px;
-    background: linear-gradient(to right, #199494, #fff);
+    background: linear-gradient(to right, #181919, #fff);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.4s ease-in-out;
@@ -368,7 +404,9 @@ main {
 
 
 /* prject showcase */
-
+/* .project-container {
+    font-family: "HelveticaNeueBlack";
+} */
 
 .contact-tittle h2 {
     color: gray;
@@ -382,7 +420,18 @@ label.error {
 
 
 
+.skill-section {
+    font-family: "montserrat-latin-600";
 
+}
+
+.project-container{
+    font-family: "montserrat-latin-500";
+}
+
+.follow-me-section{
+    font-family: "montserrat-latin-400";
+}
 
 
 .mobile-menu {
