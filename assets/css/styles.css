@@ -111,20 +111,6 @@ main {
     top: 8px;
 }
 
-/* Mobile Menu Styles */
-/* .mobile-menu {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    right: -100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
-
 .mobile-link::after {
     content: '';
     position: absolute;
@@ -418,6 +404,15 @@ label.error {
     margin-top: 5px;
 }
 
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    animation: fadeIn 0.5s;
+}
 
 
 .skill-section {
@@ -425,11 +420,11 @@ label.error {
 
 }
 
-.project-container{
+.project-container {
     font-family: "montserrat-latin-500";
 }
 
-.follow-me-section{
+.follow-me-section {
     font-family: "montserrat-latin-400";
 }
 
@@ -439,6 +434,9 @@ label.error {
     transition: all 0.6s ease-in;
 }
 
+.project-section::-webkit-scrollbar {
+    display: none;
+}
 
 
 @media screen and (max-width: 1000px) {

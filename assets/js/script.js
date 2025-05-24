@@ -227,7 +227,8 @@ function SkillAnimation() {
             scroller: `main`,
             start: "top 50%",
             end: "bottom 100%",
-            markers: false,
+            // markers: true,
+            
             scrub: 2,
             stagger: 0.2,
         }
@@ -412,7 +413,7 @@ function circleTextAnimation() {
 
     // Rotation Animation
     let rotation = 0;
-    let speed = 1; // Normal speed
+    let speed = 1; 
     let interval = setInterval(() => {
         rotation += speed;
         container.style.transform = `rotate(${rotation}deg)`;
@@ -448,7 +449,7 @@ function validationContact() {
                 required: true,
                 minlength: 3
             },
-            lastname: { // Fixed typo here
+            lastname: {
                 required: true,
                 minlength: 3
             },
@@ -489,7 +490,7 @@ function validationContact() {
         },
         submitHandler: function (form) {
             alert("Form submitted successfully!");
-            form.reset(); // Resets the form after successful submission
+            form.reset(); 
         }
     });
 
